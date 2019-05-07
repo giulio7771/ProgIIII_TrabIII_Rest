@@ -1,3 +1,4 @@
+var rota_raiz = 'http://dummy.restapiexample.com/api/v1';
 function getAll(){
 	$.ajax({
 		url: 'http://dummy.restapiexample.com/api/v1/employees',
@@ -95,4 +96,41 @@ function deleteById(id){
 			console.log(msgerror)
 		}
 	})
+}
+
+function A(){
+	$.ajax({
+		url: rota_raiz+'/employees',
+		type: 'GET',
+		success: function(response){
+			let employees = JSON.parse(response);
+			console.log(employees);
+			let count = 0;
+			for(let i of employees){
+				count++;
+				if(count == 15){
+					break;
+				}else{
+					putEmployee(i);
+				}
+			}
+		},
+		error: function(msgerror){
+			
+		}
+	})
+}
+function putEmployee(employee){
+	let table = document.querySelector('#employees table');
+	let tr = document.createElement('tr');
+	table.appendChild(tr);
+	
+	let attribs = ['id','employee_name','employee_salary','employee_age']
+	for(i of attribs){			
+		let tdID = document.createElement('td');
+		tr.appendChild(tdID);
+		let idValue = document.createTextNode(employee[i]);
+		tdID.appendChild(idValue);
+	}
+	
 }
