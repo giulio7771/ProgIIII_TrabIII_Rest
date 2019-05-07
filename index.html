@@ -5,7 +5,7 @@
 		</script>
 	</head>
 	<body>
-		<script src="funcao.js"></script>
+		
 		<div>
 			<button onclick="getAll()">GET ALL</button>
 			<button onclick="get()">GET ID</button>
@@ -14,13 +14,21 @@
 			<button onclick="deleteId()">DELETE ID</button>
 			<button onclick="deleteNome()">DELETE NOME</button>
 			
+			
 			<button onclick="A()">A</button>
+			<div>
+			<input type="number" placeholder="ID" id="B">
+			<button onclick="B()">B</button>
+			</div>
 		</div>
 		<div id="employees">
-		<table>
 		
+		<table style="border: 1px solid black;">
+		<tr><td>A - Employees</td></tr>
 		</table>
 		</div>
 		
+		<textarea id="test"></textarea>
+		<script src="funcao.js"></script>
 	</body>
 </html>

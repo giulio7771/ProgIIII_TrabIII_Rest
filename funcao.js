@@ -1,4 +1,5 @@
 var rota_raiz = 'http://dummy.restapiexample.com/api/v1';
+
 function getAll(){
 	$.ajax({
 		url: 'http://dummy.restapiexample.com/api/v1/employees',
@@ -133,4 +134,27 @@ function putEmployee(employee){
 		tdID.appendChild(idValue);
 	}
 	
+}
+
+
+function B(){
+	var TA = document.getElementById("test");
+	console.log(TA);
+	let input = document.querySelector('#B');
+	let rota = rota_raiz + "/employee/" + input.value;
+	console.log(rota);
+	$.ajax({
+		url: rota,
+		type: 'GET',
+		success: function(result){
+			let person = JSON.parse(result);
+			let valuePrint = JSON.stringify(person);
+			console.log(valuePrint);
+			TA.value = valuePrint;
+			
+		},
+		error: function(result){
+			
+		}
+	})
 }
