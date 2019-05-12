@@ -14,21 +14,56 @@
 			<button onclick="deleteId()">DELETE ID</button>
 			<button onclick="deleteNome()">DELETE NOME</button>
 			
-			
+			<br>
+			<br>
 			<button onclick="A()">A</button>
+			<div id="employees">
+		
+					<table style="border: 1px solid black;">
+						<tr><td>A - Employees</td></tr>
+						<tr><th>ID</th>
+							<th>Name</th>
+							<th>Salary</th>
+							<th>Age</th>
+						</tr>
+					</table>
+					</div>
 			<div>
-			<input type="number" placeholder="ID" id="B">
+				<br>
+			<input type="number" placeholder="Search by ID" id="B">
 			<button onclick="B()">B</button>
+			<textarea id="test"></textarea>
 			</div>
+			<br>
+			<br>
+			<div>
+				<input type="text" id="c-nome" placeholder="nome">
+				<input type="text" id="c-idade" placeholder="idade">
+				<input type="text" id="c-salario" placeholder="salario">
+				<button onclick="C()">C</button>
+			</div>
+
+			<div>
+					<input type="text" id="d-id" placeholder="id">
+					<input type="text" id="d-nome" placeholder="novo nome">
+					<input type="text" id="d-idade" placeholder="nova idade">
+					<input type="text" id="d-salario" placeholder="novo salario">
+					<button onclick="D()">D</button>
+			</div>
+			
+			<br>
+			<br>
+				<input type="text" id="e-id" placeholder="id">
+				<button onclick="E()">E - delete by id</button>
+			<br>
+				<input type="text" id="f-name" placeholder="name">
+				<button onclick="F()" >F - delete by name</button>
+				
 		</div>
-		<div id="employees">
+		<br><br><br><br><br><br><br>
 		
-		<table style="border: 1px solid black;">
-		<tr><td>A - Employees</td></tr>
-		</table>
-		</div>
 		
-		<textarea id="test"></textarea>
+		
 		<script src="funcao.js"></script>
 	</body>
 </html>
